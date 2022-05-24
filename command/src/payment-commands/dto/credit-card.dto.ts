@@ -2,10 +2,10 @@ type CreditCardType = 'visa' | 'marstercard' | 'dinner';
 
 export class CreditCardDto {
     constructor(
-        private readonly cardtype: CreditCardType,
-        private readonly cardCustomerFullName: string,
-        private readonly cardNumber: string,
-        private readonly cardCcv: string,
-        private readonly transactionAmount: number
+        public readonly cardtype: CreditCardType,
+        public readonly cardCustomerFullName: string,
+        public readonly cardNumber: string,
+        public readonly cardCcv: string,
+        public readonly transactionAmount: number
     ) { }
 }
