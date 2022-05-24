@@ -200,8 +200,8 @@
     "yargs": "^17.5.1",
     "write-file-atomic": "^4.0.1"
   },
-  "scripts": {
-    "test": "mocha"
+  "scripts" : { 
+    "test" : "jest" 
   },
   "repository": {
     "type": "git",
