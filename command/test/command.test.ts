@@ -49,3 +49,23 @@ describe("Payment Method Handler", () => {
         paymentMethodHandler.process(new PaypalCommand(creditCard));
     });
 });
+
+describe("Payment Method Handler forceToProcess", () => {
+    it("success case", () => {
+        const paymentMethodHandler = new PaymentMethodHandler();
+
+        const creditCard = new CreditCardDto(
+            "visa",
+            "Eduardo Rodríguez Patiño",
+            "xxx-xxx-xxx-xxx",
+            "xxx",
+            300.00
+        );
+
+        paymentMethodHandler.forceToProcess([
+            new PaypalCommand(creditCard),
+            new PayUCommand(creditCard),
+            new MercadoPagoCommand(creditCard)
+        ]);
+    });
+});
